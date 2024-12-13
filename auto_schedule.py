@@ -78,7 +78,7 @@ def compute_ALAP_times(graph, max_step):
 
 
 def solve_problem(problem):
-    solver = HiGHS_CMD(msg=True, timeLimit=1800, threads=16, options=["--presolve=on", "--parallel=on"])
+    solver = HiGHS_CMD(msg=False, timeLimit=1800, threads=16, options=["--presolve=on", "--parallel=on"])
     result_status = problem.solve(solver)
     return result_status
 
